@@ -1,0 +1,85 @@
+{
+  "objetos": {
+      "espada": {
+          "nombre": "Espada",
+          "descripcion": "Una espada oxidada pero afilada.",
+          "descripcionInventario": "Una espada oxidada que has encontrado en el suelo. Parece que ha visto mejores días, pero aún podría ser útil en un apuro.",
+          "eventoSiguiente": "sala2"
+      },
+      "arco": {
+          "nombre": "Arco",
+          "descripcion": "Un arco de madera en buen estado.",
+          "descripcionInventario": "Un arco de madera resistente y bien hecho. Perfecto para cazar o defenderte de los enemigos.",
+          "eventoSiguiente": "sala3"
+      },
+      "escudo": {
+          "nombre": "Escudo",
+          "descripcion": "Un escudo de metal resistente.",
+          "descripcionInventario": "Un escudo de metal sólido que te protegerá de los ataques enemigos. Es pesado, pero te dará una gran ventaja en combate.",
+          "eventoSiguiente": "sala4"
+      }
+  },
+  "eventos": {
+      "sala1": {
+          "historia": "Te despiertas desorientado, al mirar a tu alrededor observas...",
+          "opciones": [
+              {
+                  "texto": "Una espada",
+                  "accion": "elegirObjeto('espada')"
+              },
+              {
+                  "texto": "Un arco",
+                  "accion": "elegirObjeto('arco')"
+              },
+              {
+                  "texto": "Un escudo",
+                  "accion": "elegirObjeto('escudo')"
+              }
+          ]
+      },
+      "sala2": {
+          "historia": "Has encontrado una espada oxidada. La recoges y la examinas.",
+          "opciones": [
+              {
+                  "texto": "Continuar explorando",
+                  "accion": "irASala3()"
+              }
+          ]
+      },
+      "sala3": {
+          "historia": "Has encontrado un arco de madera en buen estado. Lo coges y lo pruebas.",
+          "opciones": [
+              {
+                  "texto": "Continuar explorando",
+                  "accion": "irASala4()"
+              }
+          ]
+      },
+      "sala4": {
+          "historia": "Has encontrado un escudo de metal resistente. Lo equipas y te sientes más protegido.",
+          "opciones": [
+              {
+                  "texto": "Continuar explorando",
+                  "accion": "irAlJefeFinal()"
+              }
+          ]
+      },
+      "jefeFinal": {
+          "historia": "Te encuentras frente a un feroz jefe final. Debes derrotarlo para completar el juego.",
+          "opciones": [
+              {
+                  "texto": "Atacar con la espada",
+                  "accion": "atacarJefeEspada()"
+              },
+              {
+                  "texto": "Disparar con el arco",
+                  "accion": "atacarJefeArco()"
+              },
+              {
+                  "texto": "Defenderse con el escudo",
+                  "accion": "defenderseJefe()"
+              }
+          ]
+      }
+  }
+}
